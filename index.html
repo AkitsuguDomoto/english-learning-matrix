@@ -361,18 +361,23 @@
     }
 
     .axis-label.left {
-      left: 0;
+      left: 8px;
       top: 50%;
-      transform: translateY(-50%) rotate(-90deg);
-      transform-origin: center;
     }
 
     .axis-label.right {
-      right: -8px;
+      right: 8px;
       top: 50%;
-      transform: translateY(-50%) rotate(90deg);
-      transform-origin: center;
       color: var(--need);
+    }
+
+    .axis-label.left,
+    .axis-label.right {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      line-height: 1.1;
+      transform: translateY(-50%);
+      white-space: nowrap;
     }
 
     .matrix {
@@ -765,11 +770,11 @@
       }
 
       .axis-label.right {
-        right: -22px;
+        right: 4px;
       }
 
       .axis-label.left {
-        left: -18px;
+        left: 4px;
       }
 
       .quadrant {
