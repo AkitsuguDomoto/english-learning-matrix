@@ -241,34 +241,6 @@
       font-size: 1.02rem;
     }
 
-    .quick-stats {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .stat {
-      min-height: 86px;
-      padding: 14px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255, 250, 241, 0.86);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 1.55rem;
-      line-height: 1;
-    }
-
-    .stat span {
-      display: block;
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 0.86rem;
-      line-height: 1.45;
-    }
-
     main {
       display: grid;
       grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
@@ -721,10 +693,6 @@
         grid-template-columns: 1fr;
       }
 
-      .quick-stats {
-        max-width: 520px;
-      }
-
       .type-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -794,7 +762,6 @@
       }
 
       .fine-control,
-      .quick-stats,
       .type-list {
         grid-template-columns: 1fr;
       }
@@ -846,16 +813,14 @@
           グラフ上で今の立ち位置を選ぶと、あなたの学習タイプ、優先度、避けたい学び方、次の一歩がすぐに表示されます。
         </p>
       </div>
-      <div class="quick-stats" aria-label="診断の特徴">
-        <div class="stat">
-          <strong>2軸</strong>
-          <span>外的必要性と内的モチベーションで判断</span>
-        </div>
-        <div class="stat">
-          <strong>5タイプ</strong>
-          <span>4象限と中央の検討中タイプに分類</span>
-        </div>
-      </div>
+      <aside class="guide-panel" aria-labelledby="guideTitle">
+        <h2 id="guideTitle">使い方</h2>
+        <ol>
+          <li>英語がどれくらい必要かを左右方向で選びます。</li>
+          <li>英語をどれくらい勉強したいかを上下方向で選びます。</li>
+          <li>中央に近い場合は、目的を整理する「検討中タイプ」として扱います。</li>
+        </ol>
+      </aside>
     </section>
 
     <main>
@@ -979,14 +944,6 @@
           <p class="copy-feedback" id="copyFeedback" aria-live="polite"></p>
         </section>
 
-        <aside class="guide-panel" aria-labelledby="guideTitle">
-          <h2 id="guideTitle">使い方</h2>
-          <ol>
-            <li>英語がどれくらい必要かを左右方向で選びます。</li>
-            <li>英語をどれくらい勉強したいかを上下方向で選びます。</li>
-            <li>中央に近い場合は、目的を整理する「検討中タイプ」として扱います。</li>
-          </ol>
-        </aside>
       </div>
     </main>
 
@@ -1014,7 +971,7 @@
     </section>
 
     <footer class="footer">
-      <p>個人情報の入力は不要です。診断結果はブラウザ上で即時表示されます。 このツールについてのお問い合わせ: <a href="mailto:akitsugu-domoto@word-tailor.com">akitsugu-domoto@word-tailor.com</a></p>
+      <p>個人情報の入力は不要です。診断結果はブラウザ上で即時表示されます。 このツールについてのお問い合わせ: <a href="https://word-tailor.com/" target="_blank" rel="noreferrer">https://word-tailor.com/</a></p>
     </footer>
   </div>
 
